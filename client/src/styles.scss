@@ -5,7 +5,7 @@ body,
 #root,
 .App {
   width: 100%;
-  height: 100%;
+  max-height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -31,7 +31,6 @@ body,
 }
 
 .colors-wrap {
-  height: 100%;
   width: 300px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
@@ -61,7 +60,7 @@ body,
 }
 
 form {
-  margin-top: 60px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
 
@@ -88,12 +87,38 @@ form {
   display: flex;
   justify-content: space-between;
   padding: 0 36px 0 41px;
+}
+button {
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 3px 8px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
 
-  button {
-    border: none;
-    background-color: black;
-    color: white;
-    padding: 3px 8px;
-    margin-top: 16px;
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .login-form {
+    margin-top: 50px;
+
+    .login-form-content {
+      input {
+        border-radius: 3px;
+        border: 0.5px solid black;
+        width: 130px;
+        padding: 5px;
+        margin: 0 5px;
+      }
+    }
   }
+}
+
+.logout:hover {
+  cursor: pointer;
 }
